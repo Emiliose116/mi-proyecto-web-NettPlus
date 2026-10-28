@@ -1,0 +1,127 @@
+
+/* =========================================
+   NETTPLUS | Componentes
+   ========================================= */
+
+/* Navegación */
+
+/* Navegación */
+
+nav {
+    width: 100%;
+    margin: 24px auto 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.10);
+    color: var(--blanco);
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--texto);
+}
+
+/* Banner */
+
+.banner {
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 28px auto;
+}
+
+/* Figuras */
+
+figure {
+    margin: 26px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #63716A;
+}
+
+/* Artículos */
+
+article {
+    margin-bottom: 26px;
+}
+
+/* Botón volver arriba */
+
+.boton-subir {
+    display: none;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+
+    background: #63952F;
+    color: #FFFFFF;
+
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.boton-subir:hover {
+    background: #4F7925;
+    transform: translateY(-3px);
+}
+
+.boton-subir:focus-visible {
+    outline: 3px solid #F5D900;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .boton-subir {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}
