@@ -1,89 +1,39 @@
 
-/* =========================================
-   NETTPLUS | Componentes
-   ========================================= */
+/* ==========================================
+   NETTPLUS - COMPONENTES ESPECÍFICOS
+   ========================================== */
 
-/* Navegación */
-
-/* Navegación */
-
-nav {
-    width: 100%;
-    margin: 24px auto 0;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    padding: 8px 13px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 9px;
-    background: rgba(255, 255, 255, 0.10);
+/* Botón para abrir el prototipo de Figma */
+nav ul li a[href*="figma.com"] {
+    display: inline-block;
+    padding: 10px 17px;
+    background-color: var(--azul);
     color: var(--blanco);
-    text-align: center;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 3px 8px rgba(11, 95, 136, 0.15);
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-nav a:hover,
-nav a:focus-visible {
-    background: var(--amarillo);
-    border-color: var(--amarillo);
-    color: var(--texto);
+nav ul li a[href*="figma.com"]:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border-color: var(--azul-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(8, 71, 101, 0.2);
 }
 
-/* Banner */
-
-.banner {
-    display: block;
-    width: calc(100% - 40px);
-    max-width: 1000px;
-    margin: 28px auto;
+nav ul li a[href*="figma.com"]:active {
+    transform: translateY(0);
 }
 
-/* Figuras */
-
-figure {
-    margin: 26px 0;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-}
-
-figcaption {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #63716A;
-}
-
-/* Artículos */
-
-article {
-    margin-bottom: 26px;
-}
-
-/* Botón volver arriba */
-
+/* Botón flotante para volver arriba */
 .boton-subir {
     display: none;
     position: fixed;
@@ -93,35 +43,51 @@ article {
 
     width: 48px;
     height: 48px;
-    border: none;
+    padding: 0;
+
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
     border-radius: 50%;
 
-    background: #63952F;
-    color: #FFFFFF;
-
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    cursor: pointer;
+    line-height: 1;
 
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(31, 55, 42, 0.2);
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .boton-subir:hover {
-    background: #4F7925;
+    background-color: var(--verde-oscuro);
     transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(31, 55, 42, 0.25);
+}
+
+.boton-subir:active {
+    transform: translateY(0);
 }
 
 .boton-subir:focus-visible {
-    outline: 3px solid #F5D900;
-    outline-offset: 3px;
+    outline: 3px solid var(--amarillo);
+    outline-offset: 4px;
 }
 
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 700px) {
+    nav ul li a[href*="figma.com"] {
+        padding: 9px 12px;
+        font-size: 0.9rem;
+    }
+
     .boton-subir {
         right: 16px;
         bottom: 16px;
         width: 44px;
         height: 44px;
+        font-size: 24px;
     }
 }
