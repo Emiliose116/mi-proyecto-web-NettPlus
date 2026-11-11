@@ -3,20 +3,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de bienvenida</title>
+    <title>Personaliza tu tarjeta</title>
+
+    <style>
+        .tarjeta {
+            background-color: lightgray;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h1>Bienvenido a mi página web</h1>
+    <h1>Personaliza tu tarjeta</h1>
 
-    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+    <div class="tarjeta" id="tarjeta">
+        <p>Bienvenido a mi aplicación web</p>
+    </div>
 
-    <button id="boton">Enviar</button>
+    <button id="azul">Azul</button>
+    <button id="verde">Verde</button>
+    <button id="rojo">Rojo</button>
+    <button id="restablecer">Restablecer</button>
 
-    <p id="mensaje"></p>
-
-    <script src="./app_ejemplo.js"></script>
+    <script src="./js/app_ejemplo.js"></script>
 
 </body>
 </html>
+
 

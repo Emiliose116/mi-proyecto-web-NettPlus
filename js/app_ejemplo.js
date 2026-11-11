@@ -1,21 +1,40 @@
+console.log("JavaScript conectado correctamente");
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario de bienvenida</title>
-</head>
-<body>
+const tarjeta = document.querySelector("#tarjeta");
+const azul = document.querySelector("#azul");
+const verde = document.querySelector("#verde");
+const rojo = document.querySelector("#rojo");
+const restablecer = document.querySelector("#restablecer");
 
-    <h1>Bienvenido a mi página web</h1>
+console.log("Tarjeta:", tarjeta);
+console.log("Azul:", azul);
+console.log("Verde:", verde);
+console.log("Rojo:", rojo);
+console.log("Restablecer:", restablecer);
+// 2. Cambiar el color a azul
+azul.addEventListener("click", function(){
 
-    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+    tarjeta.style.backgroundColor = "blue";
 
-    <button id="boton">Enviar</button>
+});
 
-    <p id="mensaje"></p>
+// 3. Cambiar el color a verde
+verde.addEventListener("click", function(){
 
-    <script src="./app_ejemplo.js"></script>
+    tarjeta.style.backgroundColor = "green";
 
-</body>
-</html>
+});
+
+// 4. Cambiar el color a rojo
+rojo.addEventListener("click", function(){
+
+    tarjeta.style.backgroundColor = "red";
+
+});
+
+// 5. Restablecer el color original
+restablecer.addEventListener("click", function(){
+
+    tarjeta.style.backgroundColor = "lightgray";
+
+});
