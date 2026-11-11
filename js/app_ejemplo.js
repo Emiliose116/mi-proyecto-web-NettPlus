@@ -1,18 +1,21 @@
 
-// 1. Buscar elementos del DOM
-const formulario = document.querySelector("#formulario");
-const nombre = document.querySelector("#nombre");
-const mensaje = document.querySelector("#mensaje");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de bienvenida</title>
+</head>
+<body>
 
-// 2. Escuchar el evento submit del formulario
-formulario.addEventListener("submit", function(event){
+    <h1>Bienvenido a mi página web</h1>
 
-    event.preventDefault();
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
 
-    // 3. Obtener el nombre ingresado
-    const nombreUsuario = nombre.value;
+    <button id="boton">Enviar</button>
 
-    // 4. Mostrar mensaje de bienvenida
-    mensaje.textContent = "Bienvenido a la clase " + nombreUsuario;
+    <p id="mensaje"></p>
 
-});
+    <script src="./app_ejemplo.js"></script>
+
+</body>
+</html>
